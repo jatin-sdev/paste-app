@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.App {
+  @apply h-screen bg-zinc-800 text-white;
+}
+
+.Navbar {
+  @apply p-4 flex justify-center items-center;
+}
