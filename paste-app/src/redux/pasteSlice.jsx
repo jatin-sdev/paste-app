@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-hot-toast";
+ 
 
 const initialState = {
   pastes: localStorage.getItem("pastes")
-    ? JSON.parse(localStorage.getItem("pastes"))
+    ? JSON.parse(localStorage.getItem("pastes")) //string to object
     : [],
 };
 
@@ -11,8 +13,15 @@ export const pasteSlice = createSlice({
   initialState,
   reducers: {
     addToPaste: (state, action) => {
+      // Check if paste with the same id already exists
+      if (state.pastes.find((paste) => paste.title === action.payload.title)) {
+        toast.error("Paste with the same title already exists!");
+        return;
+      }
+
       state.pastes.push(action.payload);
       localStorage.setItem("pastes", JSON.stringify(state.pastes));
+      toast.success("Paste created successfully!");
     },
 
     updateToPaste: (state, action) => {
