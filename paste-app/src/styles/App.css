@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.App {
+  @apply min-h-screen bg-zinc-900 text-white;
+}
+

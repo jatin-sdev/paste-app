@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.Navbar {
+  @apply p-4 flex justify-center items-center gap-x-10 bg-zinc-800 text-xl
+ ;
+}
+
+.NavbarElements {
+  @apply text-white cursor-pointer duration-100
+  hover:scale-120
+;
+}
+

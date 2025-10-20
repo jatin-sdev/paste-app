@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.homeContent {
+  @apply flex flex-col gap-y-4 mt-4 justify-center items-center 
+  ;
+}
+
+.subHomeContent {
+  @apply flex justify-between my-3 px-4 w-3xl;
+}
+
+.homeTitle {
+  @apply px-4 py-2 m-2 bg-zinc-800 rounded-xl hover:bg-zinc-800
+  focus:outline-0
+  text-2xl
+  duration-300 w-2/3
+}
+
+.createButton {
+  @apply px-4 py-2 m-2 bg-blue-600 rounded-xl hover:bg-blue-500
+  focus:outline-0 duration-300 w-1/5
+  cursor-pointer;
+}
+
+.Textarea {
+  @apply m-auto w-3xl bg-zinc-800 rounded-2xl p-4 focus:outline-0 flex decoration-0
+  border-0 hover:border-zinc-600 ;
+} 
+
+.seamless {
+  @apply bg-zinc-800 border-0 rounded-3xl p-5;
+}
