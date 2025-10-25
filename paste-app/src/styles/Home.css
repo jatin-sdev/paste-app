@@ -19,7 +19,8 @@
 .createButton {
   @apply px-4 py-2 m-2 bg-blue-600 rounded-xl hover:bg-blue-500
   focus:outline-0 duration-300 w-1/5
-  cursor-pointer;
+  cursor-pointer
+  active:scale-95;
 }
 
 .Textarea {
